@@ -41,11 +41,13 @@ fi
 LOGFILE="html/attachment-$SEQ.html"
 DATA="boardSeq=2&boardGb=T&boardType=CORPUS&articleSeq=$SEQ&roleGb=U&userId=0&fNo=$SEQ&thread=A&lan=1&attachIdx=$ATTIDX&fileSeq=$FILESEQ&fileSeqValues=$FILESEQVALUES&dataGb=E&regGb=1&isInsUpd=U&upperLowerGb=T&pageIndex=1&commentPageIndex=1&subListPageIndex=1&paramClass1Depth=11&paramClass2Depth=1157&searchStartDt=&searchEndDt=&searchDataGb=E&searchCondition=&searchKeyword=&beforePage=&searchWsType=&searchClass1Depth=&searchClass2Depth=&searchAnalType=&searchStartPublishYear=&searchEndPublishYear=&searchPublisher=&searchAuthor=&searchCclAll=&searchCclFree=&searchCommercialUseGb=&searchWorkChangeGb=&searchConditionPermit=&searchCclNoLimit=&searchCclLimit=&searchPlaceTop=&corpusBasketList=&searchYn=Y&cclGb=1&commercialUseGb=2&workChangeGb=2&orgFileSeq=1&posFileSeq=2&agreementYn=on&commentSeq=&commentContents="
 
-if test "$(uname -s)" = "Darwin"; then
-	ICONV="iconv -f cp949 -t utf8-mac"
-else
-	ICONV="iconv -f cp949 -t utf-8"
-fi
+#if test "$(uname -s)" = "Darwin"; then
+#	ICONV="iconv -f cp949 -t utf8-mac"
+#else
+#	ICONV="iconv -f cp949 -t utf-8"
+#fi
+
+ICONV="iconv -f cp949 -t utf-8"
 
 TCOUNT=0
 while test $TCOUNT -lt $TRYCOUNT
